@@ -17,10 +17,10 @@ const app = express()
 const url = "https://www.theguardian.com.au/"
 const url1 = "https://uniteapi.dev/p/ttvOmbeagle"
 const url2 = "https://uniteapi.dev/p/UntamedTheG"
-const url3 = "https://uniteapi.dev/p/TofuBean"
+const url3 = "https://uniteapi.dev/p/puffu"
 
 
-const urls = ["https://uniteapi.dev/p/ttvOmbeagle", "https://uniteapi.dev/p/UntamedTheG", "https://uniteapi.dev/p/TofuBean"]
+const urls = ["https://uniteapi.dev/p/Isnoalx", "https://uniteapi.dev/p/puffu"]
 
 // const ombeagle = cheerio.load(`
 // <meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><meta name="description"/><meta itemProp="name"/><meta name="twitter:site" content="@uniteapi"/><meta name="twitter:title"/><meta name="twitter:description"/><meta name="twitter:creator" content="@uniteapi"/><meta name="twitter:image:src"/><meta name="twitter:card" content="summary_large_image"/><meta name="og:type" content="website"/><meta name="og:url" content="uniteapi.dev/p/ttvOmbeagle"/><meta name="og:image"/><meta name="og:description"/><meta name="og:site_name" content="Unite Api"/><meta name="og:published_time" content="2022-06-06T10:50:05.477Z"/><meta name="og:modified_time" content="2022-06-06T10:50:05.477Z"/><script type="application/ld+json">{"@context":"http://schema.org","@type":"page","url":"uniteapi.dev/p/ttvOmbeagle"}</script><meta content="Unite API - ttvOmbeagle (M6EP4NQ)" property="og:title"/><meta content="Pokémon Unite : Lv.40 Master 2188
@@ -61,6 +61,7 @@ const getUniteApiData = async (url) => {
     try {
         const {data} = await axios.get(url);
         // const html = response.data
+        console.log('Requesting data')
         const $ = cheerio.load(data)
         const uniteProfile = {};
 
